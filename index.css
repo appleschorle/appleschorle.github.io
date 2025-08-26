@@ -1,0 +1,132 @@
+:root {
+  --gruvbox-bg-0: #1d2021;
+  --gruvbox-fg-0: #d4be98;
+  --gruvbox-yellow: #d8a657;
+  --gruvbox-blue: #7daea3;
+  --gruvbox-green: #a9b665;
+  --gruvbox-red: #ea6962;
+  --gruvbox-aqua: #89b482;
+  --gruvbox-purple: #d3869b;
+  --gruvbox-orange: #e78a4e;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: var(--gruvbox-bg-0);
+  color: var(--gruvbox-fg-0);
+}
+
+h1 {
+  text-align: center;
+  color: var(--gruvbox-red);
+}
+
+h2 {
+  color: var(--gruvbox-aqua);
+}
+
+a {
+  color: var(--gruvbox-blue);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--gruvbox-yellow);
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === Home === */
+.typewriter-style {
+  min-height: 2em;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  color: var(--gruvbox-green);
+}
+
+.profile {
+  display: block;
+  max-width: 100%;
+  max-height: 250px;
+  margin: auto;
+}
+
+/* === Background === */
+@media (min-width: 600px) {
+  .timeline li {
+    grid-template-columns: max-content 1fr;
+  }
+}
+
+@media (min-width: 1140px) {
+  .timeline li {
+    grid-template-columns: max-content max-content max-content 1fr;
+  }
+}
+
+.timeline {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline li {
+  display: grid;
+  column-gap: 1rem;
+}
+
+.timeline .place {
+  color: var(--gruvbox-green);
+}
+
+.timeline .title {
+  color: var(--gruvbox-orange);
+}
+
+.timeline .description {
+  color: var(--gruvbox-purple);
+}
+
+/* === Random === */
+.football {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.football img {
+  max-width: min(500px, 100%);
+  height: auto;
+}
+
+/* === Blogs === */
+.blog-img {
+  display: block;
+  margin: 0 auto;
+  max-width: min(500px, 100%);
+  height: auto;
+}
+
+.blog-meta {
+  color: var(--gruvbox-green);
+}

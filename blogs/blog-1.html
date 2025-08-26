@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Eugene Park. Showcasing experience, skills and hobbies."
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Portfolio - Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/background.html">Background</a>
+        <a href="/random.html">Random</a>
+        <a href="/blogs.html">Blogs</a>
+      </nav>
+
+      <h1>Why I Updated My Portfolio Website</h1>
+      <img
+        class="blog-img"
+        src="/static/node-discontinue.png"
+        alt="Vercel discontinues Node 18"
+      />
+      <p class="blog-meta">
+        <time datetime="2025-08-27">August 27th, 2025</time> •
+        <time datetime="PT2M">2 min read</time>
+      </p>
+      <p>
+        Over the years, I’ve updated my portfolio webpage multiple times.
+        Whenever I reached a milestone, whether it was my first job or my
+        bachelor’s graduation, I quickly updated my portfolio to showcase my
+        newly gained experience. Often, this was also a practical move for
+        recruiters, as I was usually preparing to look for a new job at these
+        milestones. This time, however, while nearing the completion of my
+        master’s degree marked a new milestone, I wasn’t initially motivated to
+        upgrade my portfolio. I wasn’t particularly interested in learning a new
+        front-end framework, and most importantly, I was happy with my previous
+        website. Sure, it needed updates to reflect my new experiences and
+        skills, but I wasn’t planning to rewrite it entirely.
+      </p>
+      <p>
+        Recently, Vercel, the platform where I hosted my previous portfolio
+        built in Svelte, dropped support for Node 18, requiring me to either
+        upgrade my version or rewriting my website. It was frustrating,
+        especially in a world where HTML pages from the 90s still render
+        perfectly on modern browsers. I originally chose Svelte because I
+        believed it would help me escape the bloat of frameworks like Angular
+        and React, bringing me closer to the basics of HTML, CSS, and
+        JavaScript, while keeping my code modular. However, I soon realized that
+        I still had far too many dependencies with Node, Svelte, and Vercel. I
+        still appreciate the benefits of Svelte, React, and Angular but I
+        realized that they’re designed for larger projects, not a simple
+        portfolio website.
+      </p>
+      <p>
+        This time, I wanted to strip things down even further and just write a
+        simple HTML page with some CSS, a few small touches like a JavaScript
+        typewriter effect, and some images. The goal was to eliminate external
+        dependencies and create something that works anywhere with internet
+        access and that will likely run for the next 20 years. I abandoned
+        features like my image carousel and fancy sliders, which added
+        complexity and required constant device-specific adjustments, in favor
+        of clear, descriptive content. A little bit of color (I went with my
+        favorite Gruvbox theme), some images, and basic CSS is enough to make a
+        responsive website that isn’t boring.
+      </p>
+      <p>
+        I managed to setup the website in roughly two days and enjoyed the
+        process. Of course, my opinions might change again, and I might rewrite
+        everything from scratch someday. But for now, I’m happy with the result.
+      </p>
+      <p>
+        PS: I plan to post more blog entries to improve my writing skills, but
+        only time will tell if this goal sticks or joins my long list of
+        unfinished ideas.
+      </p>
+    </div>
+  </body>
+</html>
