@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Eugene Park. Showcasing experience, skills and hobbies."
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Portfolio - Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/background.html">Background</a>
+        <a href="/random.html">Random</a>
+        <a href="/blogs.html">Blogs</a>
+      </nav>
+
+      <h1>Mind the Gap: Why Whitespace Isn't Just Empty Space</h1>
+      <img
+        class="blog-img"
+        src="/static/mind-the-gap.jpg"
+        alt="Mind the Gap warning painted on a train platform"
+      />
+      <p class="blog-meta">
+        <time datetime="2025-10-07">October 07th, 2025</time>
+        <time datetime="PT6M">6 min read</time>
+      </p>
+
+      <h2>Keeping Tabs on Spaces</h2>
+      <p>
+        Ever thought about whitespace while programming? Probably not. Atleast I
+        didn’t until recently. Yet whitespace is a core part of writing text and
+        consequently code. Let’s explore an example to see why it matters. What
+        does the following code do?
+      </p>
+
+      <pre><code>function greet(name){if(name){console.log("Hello, "+name+"!");}else{console.log("Hello, stranger!");}}greet("Alice");</code></pre>
+
+      <p>
+        Can't be bothered to read this? Me neither so let's add some whitespace
+        to make this more readable:
+      </p>
+
+      <pre
+        style="tab-size: 2"
+      ><code>function greet(name) {&#10;&nbsp;&nbsp;if (name) {&#10;&#9;&#9;console.log("Hello, " + name + "!");&#10;&nbsp;&nbsp;} else {&#10;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, stranger!");&#10;&#9;}&#10;}&#10;&#10;greet("Alice");</code></pre>
+
+      <p>
+        Much better! And yes, both examples are completely valid JavaScript. But
+        without whitespace even the simplest code block can turn into a cryptic
+        nightmare.
+      </p>
+      <p>
+        So problem solved. All you need to do is add some whitespaces and tabs
+        make it look good and you can happily share your code with everyone
+        right? right?
+      </p>
+
+      <pre
+        style="tab-size: 8"
+      ><code>function greet(name) {&#10;&nbsp;&nbsp;if (name) {&#10;&#9;&#9;console.log("Hello, " + name + "!");&#10;&nbsp;&nbsp;} else {&#10;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, stranger!");&#10;&#9;}&#10;}&#10;&#10;greet("Alice");</code></pre>
+
+      <p>
+        Your colleague opens the code… and something feels off. What looked
+        perfectly neat on your editor now looks like a chaotic mess. The
+        culprit? Mixed tabs and spaces for indentation. You, blissfully coding
+        in VSCode with a tab-size of 2, matched your spaces just fine, but your
+        gigachad colleague is rocking bare-metal Vim with a tab-size of 8.
+      </p>
+
+      <h2>Origins of the Void</h2>
+      <p>
+        Ok, so now we know why whitespace does matter at least for readability
+        we need to maybe take a look at what whitespace actually is. According
+        to our dear friend ChatGPT "Whitespace refers to any character or series
+        of characters in text that represent horizontal or vertical space but do
+        not produce a visible symbol. They are used primarily for formatting,
+        separation, and readability". There are
+        <a href="https://en.wikipedia.org/wiki/Whitespace_character"
+          >far too many whitespace characters</a
+        >
+        which I will not dive deeper into. Instead I'll to focus on the
+        whitespace characters that matter most to programmers: tabs, space and
+        the new-line character.
+      </p>
+      <p>
+        Spaces first appeared in written language to separate words and became
+        standard on 19th-century typewriters. Tabs appeared later in the
+        century, invented to align text into neat columns. Typewriters used a
+        “tab stop” system, letting the carriage slide to preset stops for quick
+        formatting, eliminating the need to insert spaces manually. Newlines
+        (line breaks) came with teletypes and early printers, signaling “end of
+        line, please return”, embodied in carriage return (CR) and line feed
+        (LF) control characters. As computing evolved, these made their way into
+        early character sets like ASCII (1963), where SPACE, TAB, CR, and LF
+        became official control characters. This legacy lives on in programming:
+        spaces separate tokens, tabs align code blocks, and newlines keep code
+        neatly organized.
+      </p>
+      <p>
+        In many languages such as Java, C or JavaScript whitespace is purely
+        used for better readability. But in some languages, such as Python,
+        whitespace is part of the syntax itself. Python’s use of whitespace
+        makes code more concise, letting programmers define scope without
+        brackets <code style="display: inline; padding: 0.1rem">{}</code>,
+        parentheses <code style="display: inline; padding: 0.1rem">()</code>, or
+        special keywords like
+        <code style="display: inline; padding: 0.1rem">if ... end</code>. Fun
+        fact if you mix spaces and tabs as indentation in Python it will throw
+        an error. The most extreme example of whitespace as syntax is an
+        esoteric language called
+
+        <a href="https://esolangs.org/wiki/Whitespace?utm_source=chatgpt.com"
+          >Whitespace</a
+        >, which uses nothing but spaces, tabs, and line breaks to write
+        programs.
+      </p>
+
+      <h2>Closing the Gap</h2>
+      <p>
+        That said, you don’t need to become a whitespace fanatic. Thankfully,
+        formatters do most of the heavy lifting: trimming trailing spaces and
+        avoiding mixed indentation. You can even make your editor show them. In
+        Neovim you can, for example, toggle rendering whitespace with
+        <code style="display: inline; padding: 0.1rem">:set list</code> and
+        <code style="display: inline; padding: 0.1rem">:set list!</code>. To
+        avoid a whitespace mess, set up your tooling and development environment
+        properly. Just remember to configure it for each language, since every
+        language has its own whitespace quirks and conventions.
+      </p>
+
+      <h2>How Nothing Taught Me Something</h2>
+      <p>
+        What got me thinking about whitespace intentionally was an internship I
+        did. As usual, I was handed a brand-new machine, but since the
+        internship was brief, I skipped fully setting up my development
+        environment the way I normally would. I dove straight in, coding in Vim
+        without plugins or formatters. My first <em><b>!six!</b></em> merge
+        requests were rejected, all due to mixed tabs and spaces or trailing
+        whitespace. At first, I was frustrated. Why fuss over indentation or
+        spaces? But after thinking about it for a while, I slowly realized why
+        senior colleagues insisted on it. Whitespace characters are just like
+        any other, except most IDEs don’t render them. That makes them easy to
+        mix up, but to a computer, a space, a tab, and a letter are all distinct
+        characters. Just as you carefully name variables and fix typos to avoid
+        bugs, you should handle whitespace with intent. In my case, sloppy
+        whitespace made my colleague’s life harder. Different tab-size settings
+        messed up the code’s appearance, and trailing spaces cluttered git
+        diffs, drawing attention away from the logic.
+      </p>
+      <p>
+        The main goal of whitespace is to make code easier to read. If you
+        notice it too much, it probably means something is off. Don't ignore it,
+        be intentional. Because:
+      </p>
+
+      <blockquote>
+        <p>
+          "Any fool can write code that a computer can understand. Good
+          programmers write code that humans can understand."
+        </p>
+        <footer style="text-align: right; font-weight: bold">
+          — Martin Fowler
+        </footer>
+      </blockquote>
+    </div>
+  </body>
+</html>

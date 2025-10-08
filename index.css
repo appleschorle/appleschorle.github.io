@@ -1,6 +1,7 @@
 :root {
   --gruvbox-bg-0: #1d2021;
   --gruvbox-fg-0: #d4be98;
+  --gruvbox-bg-5: #504945;
   --gruvbox-yellow: #d8a657;
   --gruvbox-blue: #7daea3;
   --gruvbox-green: #a9b665;
@@ -129,4 +130,11 @@ nav {
 
 .blog-meta {
   color: var(--gruvbox-green);
+}
+
+code {
+  display: block;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding: 1rem;
+  background: var(--gruvbox-bg-5);
 }
