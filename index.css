@@ -11,7 +11,7 @@
   --gruvbox-orange: #e78a4e;
 }
 
-body {
+html {
   font-family: "Space Mono", monospace;
   background: var(--gruvbox-bg-0);
   color: var(--gruvbox-fg-0);
